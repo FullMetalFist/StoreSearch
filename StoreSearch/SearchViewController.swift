@@ -33,13 +33,15 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         searchResults = []
-        
-        for i in 0...4 {
-            let searchResult = SearchResult()
-            searchResult.name = String(format: "Fake %d for ", i)
-            searchResult.artistName = searchBar.text!
-            searchResults.append(searchResult)
+        if searchBar.text! != "Mister T" {
+            for i in 0...4 {
+                let searchResult = SearchResult()
+                searchResult.name = String(format: "Fake %d for ", i)
+                searchResult.artistName = searchBar.text!
+                searchResults.append(searchResult)
+            }
         }
+        
         tableView.reloadData()
     }
     
@@ -53,7 +55,11 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: UITableViewDataSource methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchResults.count
+        if searchResults.count == 0 {
+            return 1
+        } else {
+            return searchResults.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -62,10 +68,18 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         if cell == nil {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
         }
-        let searchResult = searchResults[indexPath.row]
         
-        cell.textLabel!.text = searchResult.name
-        cell.detailTextLabel!.text = searchResult.artistName
+        if searchResults.count == 0 {
+            cell.textLabel!.text = "(Nothing Found)"
+            cell.detailTextLabel!.text = ""
+        } else {
+            let searchResult = searchResults[indexPath.row]
+            
+            cell.textLabel!.text = searchResult.name
+            cell.detailTextLabel!.text = searchResult.artistName
+        }
+        
+        
         
         return cell
     }
