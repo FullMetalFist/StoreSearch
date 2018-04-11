@@ -32,3 +32,18 @@ extension SearchViewController: UISearchBarDelegate {
         print("The search text is: '\(searchBar.text!)'")
     }
 }
+
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: UITableViewDataSource methods
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    // MARK: UITableViewDelegate methods
+}
