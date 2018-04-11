@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,38 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jvm-Kd-22O">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="App Name, artist, song, album, e-book" translatesAutoresizingMaskIntoConstraints="NO" id="kaa-mt-3M3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kaa-mt-3M3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5vk-x7-2jy"/>
+                            <constraint firstItem="Jvm-Kd-22O" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8JL-iK-cVM"/>
+                            <constraint firstItem="Jvm-Kd-22O" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gj5-bH-Gob"/>
+                            <constraint firstItem="Jvm-Kd-22O" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="K3L-oW-VfQ"/>
+                            <constraint firstItem="Jvm-Kd-22O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TK1-vJ-YcD"/>
+                            <constraint firstItem="kaa-mt-3M3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uxg-iG-nf7"/>
+                            <constraint firstItem="kaa-mt-3M3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="znd-M5-mGD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="kaa-mt-3M3" id="7Hg-d1-TqT"/>
+                        <outlet property="tableView" destination="Jvm-Kd-22O" id="WTB-ji-tbo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>
