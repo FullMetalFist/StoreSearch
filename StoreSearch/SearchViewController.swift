@@ -82,8 +82,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             cell.detailTextLabel!.text = searchResult.artistName
         }
         
-        
-        
         return cell
     }
     
