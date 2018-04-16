@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,25 +19,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qa3-gy-u9p">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qa3-gy-u9p">
                         <rect key="frame" x="16" y="10" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="BXk-75-8rK"/>
+                            <constraint firstAttribute="width" constant="60" id="zci-LH-koF"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1d-NJ-qZx">
-                        <rect key="frame" x="84" y="16" width="220" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1d-NJ-qZx">
+                        <rect key="frame" x="84" y="16" width="220" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1y-DU-tHL">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1y-DU-tHL">
                         <rect key="frame" x="84" y="44" width="220" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Y1y-DU-tHL" secondAttribute="bottom" constant="7" id="FgK-hP-3js"/>
+                    <constraint firstItem="qa3-gy-u9p" firstAttribute="top" secondItem="0PR-cZ-jjj" secondAttribute="top" constant="10" id="Jdd-tL-vfK"/>
+                    <constraint firstItem="O1d-NJ-qZx" firstAttribute="top" secondItem="0PR-cZ-jjj" secondAttribute="topMargin" constant="5" id="PBP-lS-KVq"/>
+                    <constraint firstItem="Y1y-DU-tHL" firstAttribute="trailing" secondItem="0PR-cZ-jjj" secondAttribute="trailingMargin" id="XQz-bW-IWZ"/>
+                    <constraint firstItem="Y1y-DU-tHL" firstAttribute="leading" secondItem="qa3-gy-u9p" secondAttribute="trailing" constant="8" id="m8f-Sr-64M"/>
+                    <constraint firstItem="O1d-NJ-qZx" firstAttribute="leading" secondItem="qa3-gy-u9p" secondAttribute="trailing" constant="8" id="ois-CH-bKN"/>
+                    <constraint firstItem="qa3-gy-u9p" firstAttribute="leading" secondItem="0PR-cZ-jjj" secondAttribute="leading" constant="16" id="rH5-GF-1NO"/>
+                    <constraint firstItem="O1d-NJ-qZx" firstAttribute="trailing" secondItem="0PR-cZ-jjj" secondAttribute="trailingMargin" id="tac-71-HOH"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="85.5" y="47.5"/>
         </tableViewCell>
