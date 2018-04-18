@@ -36,6 +36,42 @@ class SearchViewController: UIViewController {
         static let searchResultCell = "SearchResultCell"
         static let nothingFoundCell = "NothingFoundCell"
     }
+    
+    // MARK: Private methods
+    private func iTunesURL(searchText: String) -> URL {
+        let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let urlString = String(format: "https://itunes.apple.com/search?term=%@", encodedText)
+        let url = URL(string: urlString)
+        return url!
+    }
+    
+    private func performStoreRequest(with url: URL) -> Data? {
+        do {
+            return try Data(contentsOf: url)
+        } catch {
+            print("Download error: \(error.localizedDescription)")
+            showNetworkError()
+            return nil
+        }
+    }
+    
+    private func parse(data: Data) -> [SearchResult] {
+        do {
+            let decoder = JSONDecoder()
+            let result = try decoder.decode(ResultArray.self, from: data)
+            return result.results
+        } catch {
+            print("JSON error: \(error)")
+            return []
+        }
+    }
+    
+    private func showNetworkError() {
+        let alert = UIAlertController(title: "Oh no", message: "There was an error accessing the iTunes Store", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -101,34 +137,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             return nil
         } else {
             return indexPath
-        }
-    }
-    
-    // MARK: Private methods
-    private func iTunesURL(searchText: String) -> URL {
-        let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@", encodedText)
-        let url = URL(string: urlString)
-        return url!
-    }
-    
-    private func performStoreRequest(with url: URL) -> Data? {
-        do {
-            return try Data(contentsOf: url)
-        } catch {
-            print("Download error: \(error.localizedDescription)")
-            return nil
-        }
-    }
-    
-    private func parse(data: Data) -> [SearchResult] {
-        do {
-            let decoder = JSONDecoder()
-            let result = try decoder.decode(ResultArray.self, from: data)
-            return result.results
-        } catch {
-            print("JSON error: \(error)")
-            return []
         }
     }
 }
