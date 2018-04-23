@@ -88,7 +88,7 @@ extension SearchViewController: UISearchBarDelegate {
                 searchResults = parse(data: data)
             }
             searchResults.sort {
-                $0.name.localizedStandardCompare($1.name) == .orderedAscending
+                $0 < $1
             }
             tableView.reloadData()
         }
