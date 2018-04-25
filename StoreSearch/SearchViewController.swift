@@ -49,16 +49,6 @@ class SearchViewController: UIViewController {
         return url!
     }
     
-    private func performStoreRequest(with url: URL) -> Data? {
-        do {
-            return try Data(contentsOf: url)
-        } catch {
-            print("Download error: \(error.localizedDescription)")
-            showNetworkError()
-            return nil
-        }
-    }
-    
     private func parse(data: Data) -> [SearchResult] {
         do {
             let decoder = JSONDecoder()
@@ -87,20 +77,20 @@ extension SearchViewController: UISearchBarDelegate {
             tableView.reloadData()
             hasSearched = true
             searchResults = []
-            let url = self.iTunesURL(searchText: searchBar.text!)
-            print("URL: '\(url)'")
-            let queue = DispatchQueue.global()
-            queue.async {
-                if let data = self.performStoreRequest(with: url) {
-                    self.searchResults = self.parse(data: data)
+            
+            let url = iTunesURL(searchText: searchBar.text!)
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) in
+                
+                if let error = error {
+                    print("Failed: \(error)")
+                } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                    print("Success: \(String(describing: data))")
+                } else {
+                    print("Failed: \(String(describing: response))")
                 }
-                self.searchResults.sort(by: <)
-                DispatchQueue.main.async {
-                    self.isLoading = false
-                    self.tableView.reloadData()
-                }
-                return
-            }
+            })
+            dataTask.resume()
         }
     }
     
