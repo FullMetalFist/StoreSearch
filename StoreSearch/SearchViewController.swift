@@ -90,7 +90,7 @@ extension SearchViewController: UISearchBarDelegate {
                         self.searchResults.sort(by: <)
                         DispatchQueue.main.async {
                             print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
-                            self.isLoading = true
+                            self.isLoading = false
                             self.tableView.reloadData()
                         }
                         return
