@@ -81,11 +81,20 @@ extension SearchViewController: UISearchBarDelegate {
             let url = iTunesURL(searchText: searchBar.text!)
             let session = URLSession.shared
             let dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) in
-                
+                print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
                 if let error = error {
                     print("Failed: \(error)")
                 } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                    print("Success: \(String(describing: data))")
+                    if let data = data {
+                        self.searchResults = self.parse(data: data)
+                        self.searchResults.sort(by: <)
+                        DispatchQueue.main.async {
+                            print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
+                            self.isLoading = true
+                            self.tableView.reloadData()
+                        }
+                        return
+                    }
                 } else {
                     print("Failed: \(String(describing: response))")
                 }
