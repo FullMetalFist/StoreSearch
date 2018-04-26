@@ -98,6 +98,12 @@ extension SearchViewController: UISearchBarDelegate {
                 } else {
                     print("Failed: \(String(describing: response))")
                 }
+                DispatchQueue.main.async {
+                    self.hasSearched = false
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                    self.showNetworkError()
+                }
             })
             dataTask.resume()
         }
