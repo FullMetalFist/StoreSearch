@@ -16,6 +16,7 @@
 		7C47407120825DC900FCF0E2 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C47407020825DC900FCF0E2 /* SearchResultCell.xib */; };
 		7C4740732084EA9700FCF0E2 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */; };
 		7C4740752084EED400FCF0E2 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4740742084EED400FCF0E2 /* NothingFoundCell.xib */; };
+		7C72D3232093AEB500FAA77E /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7C47407020825DC900FCF0E2 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		7C4740742084EED400FCF0E2 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				7C474034207E536600FCF0E2 /* AppDelegate.swift */,
 				7C474046207E53D200FCF0E2 /* SearchViewController.swift */,
+				7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */,
 				7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */,
 				7C474048207E5F3C00FCF0E2 /* SearchResult.swift */,
 				7C474038207E536600FCF0E2 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 				7C474049207E5F3C00FCF0E2 /* SearchResult.swift in Sources */,
 				7C4740732084EA9700FCF0E2 /* SearchResultCell.swift in Sources */,
 				7C474035207E536600FCF0E2 /* AppDelegate.swift in Sources */,
+				7C72D3232093AEB500FAA77E /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
