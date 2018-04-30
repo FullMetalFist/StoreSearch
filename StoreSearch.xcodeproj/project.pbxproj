@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C230017208F806000C7A99B /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C230016208F806000C7A99B /* LoadingCell.xib */; };
 		7C36033E2097A893003B6288 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36033D2097A893003B6288 /* GradientView.swift */; };
+		7C3603402097AFCB003B6288 /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36033F2097AFCB003B6288 /* BounceAnimationController.swift */; };
 		7C474035207E536600FCF0E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C474034207E536600FCF0E2 /* AppDelegate.swift */; };
 		7C47403A207E536600FCF0E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C474038207E536600FCF0E2 /* Main.storyboard */; };
 		7C47403C207E536600FCF0E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C47403B207E536600FCF0E2 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		7C230016208F806000C7A99B /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		7C36033D2097A893003B6288 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		7C36033F2097AFCB003B6288 /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
 		7C474031207E536600FCF0E2 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C474034207E536600FCF0E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C474039207E536600FCF0E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				7C72D3242094DC5100FAA77E /* DetailViewController.swift */,
 				7C72D326209659E000FAA77E /* DimmingPresentationController.swift */,
 				7C36033D2097A893003B6288 /* GradientView.swift */,
+				7C36033F2097AFCB003B6288 /* BounceAnimationController.swift */,
 				7C474038207E536600FCF0E2 /* Main.storyboard */,
 				7C47403B207E536600FCF0E2 /* Assets.xcassets */,
 				7C47407020825DC900FCF0E2 /* SearchResultCell.xib */,
@@ -166,6 +169,7 @@
 				7C72D327209659E000FAA77E /* DimmingPresentationController.swift in Sources */,
 				7C474049207E5F3C00FCF0E2 /* SearchResult.swift in Sources */,
 				7C4740732084EA9700FCF0E2 /* SearchResultCell.swift in Sources */,
+				7C3603402097AFCB003B6288 /* BounceAnimationController.swift in Sources */,
 				7C72D3252094DC5100FAA77E /* DetailViewController.swift in Sources */,
 				7C474035207E536600FCF0E2 /* AppDelegate.swift in Sources */,
 				7C36033E2097A893003B6288 /* GradientView.swift in Sources */,
