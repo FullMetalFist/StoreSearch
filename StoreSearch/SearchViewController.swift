@@ -128,6 +128,7 @@ class SearchViewController: UIViewController {
         
         guard landscapeVC == nil else { return }
         landscapeVC = storyboard!.instantiateViewController(withIdentifier: "LandscapeViewController") as? LandscapeViewController
+        view.endEditing(true)
         if let controller = landscapeVC {
             controller.view.frame = view.bounds
             controller.view.alpha = 0
