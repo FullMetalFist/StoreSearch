@@ -129,6 +129,9 @@ class SearchViewController: UIViewController {
         guard landscapeVC == nil else { return }
         landscapeVC = storyboard!.instantiateViewController(withIdentifier: "LandscapeViewController") as? LandscapeViewController
         searchBar.endEditing(true)
+        if self.presentedViewController != nil {
+            self.dismiss(animated: true, completion: nil)
+        }
         if let controller = landscapeVC {
             controller.view.frame = view.bounds
             controller.view.alpha = 0
