@@ -224,6 +224,10 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="MdV-xx-iyM"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="tPN-XV-aFp" id="aqi-Lg-pTB"/>
+                        <outlet property="scrollView" destination="5PM-f4-irY" id="c3e-gB-e4Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEw-r1-9fC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
