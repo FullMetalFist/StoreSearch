@@ -65,10 +65,10 @@ class LandscapeViewController: UIViewController {
         var x = marginX
         for (index, result) in searchResults.enumerated() {
             
-            let button = UIButton(type: .system)
-            button.backgroundColor = .white
-            button.setTitle("\(index)", for: .normal)
+            let button = UIButton(type: .custom)
+            button.setBackgroundImage(UIImage(named: "LandscapeButton"), for: .normal)
             button.frame = CGRect(x: x + paddingHorz, y: marginY + CGFloat(row) * itemHeight + paddingVert, width: buttonWidth, height: buttonHeight)
+            downloadImage(for: result, andPlaceOn: button)
             scrollView.addSubview(button)
             row += 1
             if row == rowsPerPage {
@@ -85,6 +85,26 @@ class LandscapeViewController: UIViewController {
         
         pageControl.numberOfPages = numPages
         pageControl.currentPage = 0
+    }
+    
+    private func downloadImage(for searchResult: SearchResult, andPlaceOn button: UIButton) {
+        
+        if let url = URL(string: searchResult.imageSmall) {
+            
+            let task = URLSession.shared.downloadTask(with: url, completionHandler: { [weak button] url, response, error in
+                
+                if error == nil, let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
+                    
+                    DispatchQueue.main.async {
+                        
+                        if let button = button {
+                            button.setImage(image, for: .normal)
+                        }
+                    }
+                }
+            })
+            task.resume()
+        }
     }
     
     override func viewDidLoad() {
