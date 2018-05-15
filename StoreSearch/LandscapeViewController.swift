@@ -25,6 +25,8 @@ class LandscapeViewController: UIViewController {
     
     private var firstTime = true
     
+    private var downloads = [URLSessionDownloadTask]()
+    
     private func tileButtons(_ searchResults: [SearchResult]) {
         
         var columnsPerPage = 5
@@ -104,6 +106,7 @@ class LandscapeViewController: UIViewController {
                 }
             })
             task.resume()
+            downloads.append(task)
         }
     }
     
@@ -132,6 +135,12 @@ class LandscapeViewController: UIViewController {
         if firstTime {
             firstTime = false
             tileButtons(searchResults)
+        }
+    }
+    
+    deinit {
+        for task in downloads {
+            task.cancel()
         }
     }
 }
