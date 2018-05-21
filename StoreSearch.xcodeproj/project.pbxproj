@@ -20,6 +20,7 @@
 		7C47407120825DC900FCF0E2 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C47407020825DC900FCF0E2 /* SearchResultCell.xib */; };
 		7C4740732084EA9700FCF0E2 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */; };
 		7C4740752084EED400FCF0E2 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C4740742084EED400FCF0E2 /* NothingFoundCell.xib */; };
+		7C677F1620B35A39001ACC8B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C677F1520B35A39001ACC8B /* Search.swift */; };
 		7C72D3232093AEB500FAA77E /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */; };
 		7C72D3252094DC5100FAA77E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72D3242094DC5100FAA77E /* DetailViewController.swift */; };
 		7C72D327209659E000FAA77E /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72D326209659E000FAA77E /* DimmingPresentationController.swift */; };
@@ -42,6 +43,7 @@
 		7C47407020825DC900FCF0E2 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		7C4740742084EED400FCF0E2 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		7C677F1520B35A39001ACC8B /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		7C72D3242094DC5100FAA77E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7C72D326209659E000FAA77E /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				7C36033F2097AFCB003B6288 /* BounceAnimationController.swift */,
 				7C3603412097B5C6003B6288 /* SlideOutAnimationController.swift */,
 				7C360369209D0493003B6288 /* LandscapeViewController.swift */,
+				7C677F1520B35A39001ACC8B /* Search.swift */,
 				7C474038207E536600FCF0E2 /* Main.storyboard */,
 				7C47403B207E536600FCF0E2 /* Assets.xcassets */,
 				7C47407020825DC900FCF0E2 /* SearchResultCell.xib */,
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C677F1620B35A39001ACC8B /* Search.swift in Sources */,
 				7C474047207E53D300FCF0E2 /* SearchViewController.swift in Sources */,
 				7C72D327209659E000FAA77E /* DimmingPresentationController.swift in Sources */,
 				7C78E2D920A3791700063B94 /* FadeOutAnimationController.swift in Sources */,
