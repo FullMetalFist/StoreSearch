@@ -29,6 +29,21 @@ class LandscapeViewController: UIViewController {
     
     private var downloads = [URLSessionDownloadTask]()
     
+    func searchResultsReceived() {
+        hideSpinner()
+        
+        switch search.state {
+        case .notSearchedYet, .loading, .noResults:
+            break
+        case .results(let list):
+            tileButtons(list)
+        }
+    }
+    
+    func hideSpinner() {
+        view.viewWithTag(1000)?.removeFromSuperview()
+    }
+    
     private func tileButtons(_ searchResults: [SearchResult]) {
         
         var columnsPerPage = 5
@@ -112,6 +127,14 @@ class LandscapeViewController: UIViewController {
         }
     }
     
+    private func showSpinner() {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        spinner.center = CGPoint(x: scrollView.bounds.midX + 0.5, y: scrollView.bounds.midY + 0.5)
+        spinner.tag = 1000
+        view.addSubview(spinner)
+        spinner.startAnimating()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.removeConstraints(view.constraints)
@@ -141,7 +164,7 @@ class LandscapeViewController: UIViewController {
             case .notSearchedYet:
                 break
             case .loading:
-                break
+                showSpinner()
             case .noResults:
                 break
             case .results(let list):
