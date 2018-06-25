@@ -101,6 +101,9 @@ class SearchViewController: UIViewController {
             coordinator.animate(alongsideTransition: { _ in
                 controller.view.alpha = 0
             }, completion: { _ in
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: true, completion: nil)
+                }
                 controller.view.removeFromSuperview()
                 controller.removeFromParentViewController()
                 self.landscapeVC = nil

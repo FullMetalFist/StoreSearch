@@ -33,8 +33,10 @@ class LandscapeViewController: UIViewController {
         hideSpinner()
         
         switch search.state {
-        case .notSearchedYet, .loading, .noResults:
+        case .notSearchedYet, .loading:
             break
+        case .noResults:
+            showNothingFoundLabel()
         case .results(let list):
             tileButtons(list)
         }
@@ -96,6 +98,9 @@ class LandscapeViewController: UIViewController {
             if column == columnsPerPage {
                 column = 0; x += marginX * 2
             }
+            
+            button.tag = 2000 + index
+            button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         }
         
         let buttonsPerPage = columnsPerPage * rowsPerPage
@@ -135,6 +140,20 @@ class LandscapeViewController: UIViewController {
         spinner.startAnimating()
     }
     
+    private func showNothingFoundLabel() {
+        let label = UILabel(frame: CGRect.zero)
+        label.text = "Nothing Found"
+        label.textColor = .white
+        label.backgroundColor = .clear
+        label.sizeToFit()
+        var rect = label.frame
+        rect.size.width = ceil(rect.size.width/2) * 2
+        rect.size.height = ceil(rect.size.height/2) * 2
+        label.frame = rect
+        label.center = CGPoint(x: scrollView.bounds.midX, y: scrollView.bounds.midY)
+        view.addSubview(label)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.removeConstraints(view.constraints)
@@ -171,6 +190,20 @@ class LandscapeViewController: UIViewController {
                 tileButtons(list)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            if case .results(let list) = search.state {
+                let detailViewController = segue.destination as! DetailViewController
+                let searchResult = list[(sender as! UIButton).tag - 2000]
+                detailViewController.searchResult = searchResult
+            }
+        }
+    }
+    
+    @objc func buttonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "ShowDetail", sender: sender)
     }
     
     deinit {
