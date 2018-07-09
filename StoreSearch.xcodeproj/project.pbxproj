@@ -9,16 +9,17 @@
 /* Begin PBXBuildFile section */
 		7C15E5EB20E314670078F7F4 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C15E5ED20E314670078F7F4 /* NothingFoundCell.xib */; };
 		7C15E5EF20E3E5570078F7F4 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C15E5F120E3E5570078F7F4 /* LoadingCell.xib */; };
+		7C15E5F620E3EAE80078F7F4 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C15E5F820E3EAE80078F7F4 /* SearchResultCell.xib */; };
 		7C36033E2097A893003B6288 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36033D2097A893003B6288 /* GradientView.swift */; };
 		7C3603402097AFCB003B6288 /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C36033F2097AFCB003B6288 /* BounceAnimationController.swift */; };
 		7C3603422097B5C6003B6288 /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3603412097B5C6003B6288 /* SlideOutAnimationController.swift */; };
 		7C36036A209D0493003B6288 /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C360369209D0493003B6288 /* LandscapeViewController.swift */; };
+		7C411FDA20EABB3F0036A92B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C411FDC20EABB3F0036A92B /* Localizable.strings */; };
 		7C474035207E536600FCF0E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C474034207E536600FCF0E2 /* AppDelegate.swift */; };
 		7C47403A207E536600FCF0E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C474038207E536600FCF0E2 /* Main.storyboard */; };
 		7C47403C207E536600FCF0E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C47403B207E536600FCF0E2 /* Assets.xcassets */; };
 		7C474047207E53D300FCF0E2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C474046207E53D200FCF0E2 /* SearchViewController.swift */; };
 		7C474049207E5F3C00FCF0E2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C474048207E5F3C00FCF0E2 /* SearchResult.swift */; };
-		7C47407120825DC900FCF0E2 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C47407020825DC900FCF0E2 /* SearchResultCell.xib */; };
 		7C4740732084EA9700FCF0E2 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */; };
 		7C677F1620B35A39001ACC8B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C677F1520B35A39001ACC8B /* Search.swift */; };
 		7C72D3232093AEB500FAA77E /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */; };
@@ -32,10 +33,13 @@
 		7C15E5EE20E3DA520078F7F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
 		7C15E5F020E3E5570078F7F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
 		7C15E5F320E3E5720078F7F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
+		7C15E5F520E3E8A20078F7F4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		7C15E5F720E3EAE80078F7F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
 		7C36033D2097A893003B6288 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		7C36033F2097AFCB003B6288 /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
 		7C3603412097B5C6003B6288 /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		7C360369209D0493003B6288 /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
+		7C411FDB20EABB3F0036A92B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7C474031207E536600FCF0E2 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C474034207E536600FCF0E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C474039207E536600FCF0E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,7 +47,6 @@
 		7C474040207E536600FCF0E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C474046207E53D200FCF0E2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7C474048207E5F3C00FCF0E2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		7C47407020825DC900FCF0E2 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		7C4740722084EA9700FCF0E2 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		7C677F1520B35A39001ACC8B /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		7C72D3222093AEB500FAA77E /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
@@ -97,10 +100,11 @@
 				7C677F1520B35A39001ACC8B /* Search.swift */,
 				7C474038207E536600FCF0E2 /* Main.storyboard */,
 				7C47403B207E536600FCF0E2 /* Assets.xcassets */,
-				7C47407020825DC900FCF0E2 /* SearchResultCell.xib */,
+				7C15E5F820E3EAE80078F7F4 /* SearchResultCell.xib */,
 				7C15E5ED20E314670078F7F4 /* NothingFoundCell.xib */,
 				7C15E5F120E3E5570078F7F4 /* LoadingCell.xib */,
 				7C474040207E536600FCF0E2 /* Info.plist */,
+				7C411FDC20EABB3F0036A92B /* Localizable.strings */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -166,8 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C47403C207E536600FCF0E2 /* Assets.xcassets in Resources */,
+				7C411FDA20EABB3F0036A92B /* Localizable.strings in Resources */,
 				7C15E5EF20E3E5570078F7F4 /* LoadingCell.xib in Resources */,
-				7C47407120825DC900FCF0E2 /* SearchResultCell.xib in Resources */,
+				7C15E5F620E3EAE80078F7F4 /* SearchResultCell.xib in Resources */,
 				7C15E5EB20E314670078F7F4 /* NothingFoundCell.xib in Resources */,
 				7C47403A207E536600FCF0E2 /* Main.storyboard in Resources */,
 			);
@@ -217,10 +222,27 @@
 			name = LoadingCell.xib;
 			sourceTree = "<group>";
 		};
+		7C15E5F820E3EAE80078F7F4 /* SearchResultCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C15E5F720E3EAE80078F7F4 /* Base */,
+			);
+			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
+		7C411FDC20EABB3F0036A92B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C411FDB20EABB3F0036A92B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7C474038207E536600FCF0E2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7C474039207E536600FCF0E2 /* Base */,
+				7C15E5F520E3E8A20078F7F4 /* nl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -1,0 +1,36 @@
+
+/* Class = "UISegmentedControl"; KSm-P7-C2M.segmentTitles[0] = "All"; ObjectID = "KSm-P7-C2M"; */
+"KSm-P7-C2M.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; KSm-P7-C2M.segmentTitles[1] = "Music"; ObjectID = "KSm-P7-C2M"; */
+"KSm-P7-C2M.segmentTitles[1]" = "Music";
+
+/* Class = "UISegmentedControl"; KSm-P7-C2M.segmentTitles[2] = "Software"; ObjectID = "KSm-P7-C2M"; */
+"KSm-P7-C2M.segmentTitles[2]" = "Software";
+
+/* Class = "UISegmentedControl"; KSm-P7-C2M.segmentTitles[3] = "E-Books"; ObjectID = "KSm-P7-C2M"; */
+"KSm-P7-C2M.segmentTitles[3]" = "E-Books";
+
+/* Class = "UIButton"; normalTitle = "$9.99"; ObjectID = "NTe-fz-kgD"; */
+"NTe-fz-kgD.normalTitle" = "$9.99";
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "UEH-JC-aqV"; */
+"UEH-JC-aqV.text" = "Type:";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "iTr-t7-hYN"; */
+"iTr-t7-hYN.text" = "Name";
+
+/* Class = "UILabel"; text = "Genre Value"; ObjectID = "jGU-8T-swg"; */
+"jGU-8T-swg.text" = "Genre Value";
+
+/* Class = "UISearchBar"; placeholder = "App Name, artist, song, album, e-book"; ObjectID = "kaa-mt-3M3"; */
+"kaa-mt-3M3.placeholder" = "App Name, artist, song, album, e-book";
+
+/* Class = "UILabel"; text = "Genre:"; ObjectID = "nFv-mX-Can"; */
+"nFv-mX-Can.text" = "Genre:";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "uQ1-PZ-Svf"; */
+"uQ1-PZ-Svf.text" = "Artist Name";
+
+/* Class = "UILabel"; text = "Kind Value"; ObjectID = "xJ5-oV-z34"; */
+"xJ5-oV-z34.text" = "Kind Value";
